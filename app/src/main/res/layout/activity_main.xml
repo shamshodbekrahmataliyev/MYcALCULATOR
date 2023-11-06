@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtBillAmout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:padding="15dp"
+        android:textSize="20dp"
+        android:background="#F49509"
+        android:textColor="@color/black"
+        android:elevation="@dimen/elevation"
+        android:text="This is Tip Calculator"
+        android:layout_marginBottom="1dp"/>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:useDefaultMargins="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:layout_row="0"
+            android:id="@+id/edtMoneyAmount"
+            android:digits="0123456789"
+            android:maxLength="6"
+            tools:ignore="LabelFor" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill_horizontal"
+            android:textColor="@color/black"
+            android:id="@+id/txtBill"
+            android:hint="@string/enter_amount"
+            android:padding="@dimen/textview_padding"
+            android:background="@color/bill_amount_backround"
+            android:elevation="@dimen/elevation"
+            android:textSize="18dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="right|center_horizontal"
+            android:id="@+id/txtTipPercent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_gravity="center_horizontal" />
+
+        <TextView
+            android:text="25%"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="right|center_vertical"/>
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:id="@+id/seekBarPercent"
+            android:layout_gravity="fill_horizontal"
+            android:max="50"
+            android:progress="25"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tip"
+            android:id="@+id/Tip"
+            android:layout_gravity="right"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_columnSpan="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTip"
+            android:layout_gravity="fill_horizontal"
+            android:padding="10dp"
+            android:gravity="center"
+            android:elevation="@dimen/elevation"
+            android:text=""
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            android:layout_row="2"
+            android:background="#0C27BF"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtLabelTotal"
+            android:layout_gravity="right|center_vertical"
+            android:text="@string/total"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_columnSpan="1"/>
+
+        <TextView
+            android:id="@+id/txtTotalBillAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:background="#0C27BF"
+            android:gravity="center"
+            android:elevation="@dimen/elevation"
+            android:padding="@dimen/textview_padding"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_columnSpan="1"
+            />
+
+
+        <TextView
+            android:id="@+id/txtMoneySaved"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="15dp"
+            android:background="#F49509"
+            android:layout_row="4"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:elevation="@dimen/elevation"
+            android:textSize="20dp"
+            android:text="This is Savings Calculator"/>
+
+
+        <EditText
+            android:hint="Enter your salary here..."
+            android:layout_gravity="fill_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/edtSalary"
+            android:background="#FFFF00"
+            android:layout_column="0"
+            android:layout_columnSpan="2"
+            android:padding="15dp"
+            android:layout_row="5"
+            android:elevation="@dimen/elevation"/>
+
+        <TextView
+            android:id="@+id/txtSavePercent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="6"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="right|center_vertical"
+            android:text="25%" />
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/seekbar_height"
+            android:layout_row="6"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal"
+            android:max="100"
+            android:progress="50"
+            android:id="@+id/seekBarSavePercent"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="7"
+            android:layout_column="0"
+            android:layout_columnSpan="1"
+            android:layout_gravity="right|center_horizontal"
+            android:text="Money Saved"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_horizontal"
+            android:background="#0C27BF"
+            android:layout_row="7"
+            android:layout_column="1"
+            android:gravity="center"
+            android:elevation="@dimen/elevation"
+            android:padding="12dp"
+            />
+
+
+    </GridLayout>
+
+</LinearLayout>
+
+
+
+
+

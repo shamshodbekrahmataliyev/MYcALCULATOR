@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">undemocratically</string>
+    <string name="enter_amount">enter_amount</string>
+    <string name="_25">25%</string>
+    <string name="tip">tip</string>
+    <string name="total">Total</string>
+    <string name="tip_percent" />
+    <dimen name="tip_percentage">25%</dimen>
+</resources>
